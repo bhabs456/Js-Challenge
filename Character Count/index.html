@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Count</title>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .character-box{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        textarea{
+            border: 2px solid skyblue;
+            border-radius: 10px;
+            outline: none;
+            /* color: red; */
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button{
+            padding: 15px 30px;
+            border-radius: 10px;
+            background: skyblue;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+        } 
+        button:hover{
+            background: rgb(77, 191, 236);
+            cursor: pointer;
+        }
+
+        p{
+            color: black;
+            padding: 10px;
+        }
+
+
+
+    </style>
+
+    <div class="character-box">
+        <textarea name="Char Count" cols="50" rows="10" id="words"></textarea>
+        <br>
+        <p id="result"></p>
+
+        <button onclick="countWords()">Count Char</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
