@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: Arial, sans-serif;
+
+        background: linear-gradient(135deg, #141e30, #243b55);
+      }
+
+      /* Clock Card */
+      .clock {
+        width: 100%;
+        max-width: 650px;
+
+        padding: 35px 30px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 25px;
+
+        background: rgba(255, 255, 255, 0.1);
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+        backdrop-filter: blur(10px);
+      }
+
+      /* Title */
+      .clock > h1 {
+        color: white;
+        font-size: 28px;
+        letter-spacing: 2px;
+      }
+
+      /* Time container */
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+      }
+
+      /* Time */
+      #time {
+        color: white;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: 3px;
+      }
+
+      /* AM / PM */
+      #time-format {
+        padding: 6px 10px;
+
+        color: white;
+        background: rgba(255, 255, 255, 0.15);
+
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      /* Responsive */
+      @media (max-width: 500px) {
+        .clock {
+          padding: 25px 15px;
+        }
+
+        .clock > h1 {
+          font-size: 24px;
+        }
+
+        #time {
+          font-size: 42px;
+          letter-spacing: 2px;
+        }
+
+        #time-format {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <h1>Digital Clock</h1>
+
+      <div class="container">
+        <h1 id="time"></h1>
+        <span id="time-format"></span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
