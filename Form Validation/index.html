@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: lightgray;
+    }
+
+    form {
+      width: 300px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: white;
+      border-radius: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    #message {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <form id="form">
+      <h2>Register</h2>
+
+      <input type="text" id="name" placeholder="Name" />
+
+      <input type="text" id="email" placeholder="Email" />
+
+      <input type="number" id="number" placeholder="Phone Number" />
+
+      <input type="password" id="password" placeholder="Password" />
+
+      <input
+        type="password"
+        id="confirm-password"
+        placeholder="Confirm Password"
+      />
+
+      <button type="button" onclick="validateForm()">Register</button>
+
+      <p id="message"></p>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
