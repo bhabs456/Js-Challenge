@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Quiz</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #08265f;
+      }
+
+      .quiz-container {
+        width: 100%;
+        max-width: 900px;
+        padding: 55px 48px 45px;
+        background-color: white;
+        border-radius: 16px;
+      }
+
+      h1 {
+        color: #08265f;
+        font-size: 38px;
+        margin-bottom: 55px;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid #999;
+        margin-bottom: 35px;
+      }
+
+      h2 {
+        color: #08265f;
+        font-size: 27px;
+        margin-bottom: 20px;
+      }
+
+      #answer-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 17px 15px;
+        border: 2px solid #999;
+        border-radius: 7px;
+        background-color: white;
+        color: #333;
+        text-align: left;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .btn:hover {
+        background-color: #e8e8e8;
+      }
+
+      .btn:active {
+        transform: scale(0.99);
+      }
+
+      .next-btn {
+        display: block;
+        margin: 30px auto 0;
+        padding: 13px 30px;
+        border: none;
+        border-radius: 7px;
+        background-color: #08265f;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+      }
+
+      .next-btn:hover {
+        background-color: #0d347d;
+      }
+
+      @media (max-width: 600px) {
+        .quiz-container {
+          padding: 35px 25px;
+        }
+
+        h1 {
+          font-size: 30px;
+          margin-bottom: 35px;
+        }
+
+        h2 {
+          font-size: 21px;
+        }
+
+        .btn {
+          font-size: 16px;
+          padding: 15px;
+        }
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: black;
+      }
+
+      .quiz-container {
+        width: 100%;
+        max-width: 925px;
+        padding: 55px 47px 90px;
+        background-color: lightslategrey;
+        border-radius: 16px;
+      }
+
+      h1 {
+        color: #08265f;
+        font-size: 38px;
+        margin-bottom: 55px;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid #999;
+        margin-bottom: 35px;
+      }
+
+      h2 {
+        color: #08265f;
+        font-size: 27px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 17px 15px;
+        margin-bottom: 30px;
+        border: 2px solid #999;
+        border-radius: 7px;
+        background-color: white;
+        color: #333;
+        text-align: left;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #f2f2f2;
+      }
+
+      .btn:last-child {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="quiz-container">
+      <h1>Simple Quiz</h1>
+
+      <hr />
+
+      <div class="quiz">
+        <h2 id="question">Question goes here...</h2>
+        <div id="answer-buttons">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+
+        <button class="next-btn">Next Questions</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
