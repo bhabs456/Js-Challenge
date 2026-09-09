@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Popup</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: lightseagreen;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Modal background/container */
+      .modal-container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.45);
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0;
+        padding: 20px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease;
+      }
+
+      .modal-container.show{
+        pointer-events: auto;
+        opacity: 1;
+      }
+
+      /* Actual modal box */
+      .modal {
+        background-color: whitesmoke;
+
+        padding: 30px;
+        border-radius: 15px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+        text-align: center;
+      }
+
+      /* Heading */
+      .modal h1 {
+        margin-bottom: 15px;
+
+        font-size: 28px;
+        color: #222;
+      }
+
+      /* Paragraphs */
+      .modal p {
+        margin-bottom: 10px;
+
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+      }
+
+      /* Open button */
+      #open {
+        background-color: lightsalmon;
+        color: #222;
+
+        padding: 15px 30px;
+
+        border: none;
+        border-radius: 10px;
+
+        font-size: 14px;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+      }
+
+      #open:hover {
+        transform: translateY(-2px);
+        background-color: #ff8f66;
+      }
+
+      /* Close button */
+      #close {
+        margin-top: 20px;
+
+        padding: 12px 25px;
+
+        border: none;
+        border-radius: 8px;
+
+        background-color: #222;
+        color: white;
+
+        font-size: 14px;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        transition: 0.2s ease;
+      }
+
+      #close:hover {
+        background-color: #444;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="open">Click Me!!</button>
+
+    <div class="modal-container" id="modal-container">
+      <div class="modal">
+        <h1>This is a Modal</h1>
+        <p>Why there is no modal showing in it.</p>
+        <p>Why there is no modal showing in it.</p>
+        <p>Why there is no modal showing in it.</p>
+        <p>Why there is no modal showing in it.</p>
+
+        <button id="close">Close Me!!</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
