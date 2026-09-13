@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3: Show/Hide Password</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you have a password input field with a toggle button.
+
+    1. CSS Task:
+       - Style #toggle-btn:
+         - Remove the default border.
+         - Show a pointer cursor on hover.
+         - Set a solid background color, white text color, padding, and rounded corners.
+
+    2. JS Task:
+       - Clicking the button must toggle the password visibility:
+         - If the password is hidden, make it visible and update button text to "Hide".
+         - If the password is visible, mask it and update button text to "Show".
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      width: 340px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .input-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+
+    #password-input {
+      flex: 1;
+      padding: 10px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    #toggle-btn {
+      /* Write your CSS here */
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h3>User Login</h3>
+    <div class="input-wrapper">
+      <input type="password" id="password-input" placeholder="Enter password" value="accenture@123">
+      <button id="toggle-btn">Show</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

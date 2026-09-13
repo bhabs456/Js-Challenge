@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 10: Modal Popup</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you must make a popup modal dialog functional.
+
+    1. CSS Task:
+       - Style .modal-overlay so it covers the entire screen with a semi-transparent
+         dark background, centered alignment, and is hidden by default.
+       - When .modal-overlay has the .active class, it must become visible.
+
+    2. JS Task:
+       - When #open-modal-btn is clicked, show the modal dialog.
+       - When #close-modal-btn is clicked, hide the modal dialog.
+       - When clicking outside the dialog on the darkened background, also close the modal.
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8fafc;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    #open-modal-btn {
+      padding: 12px 24px;
+      font-size: 15px;
+      background-color: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    #open-modal-btn:hover {
+      background-color: #4f46e5;
+    }
+
+    /* Write your CSS here */
+
+    .modal-box {
+      background: white;
+      width: 340px;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-box h3 {
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .modal-box p {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    #close-modal-btn {
+      padding: 8px 18px;
+      background-color: #ef4444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #close-modal-btn:hover {
+      background-color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Accenture Interview Practice</h2>
+  <button id="open-modal-btn">Open Dialog</button>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box" id="modal-box">
+      <h3>Confirmation</h3>
+      <p>Are you sure you want to submit your assessment?</p>
+      <button id="close-modal-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

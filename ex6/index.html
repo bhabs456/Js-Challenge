@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 6: Form Validation</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you must validate a simple signup form on submit.
+
+    1. CSS Task:
+       - Define the `.input-error` class to highlight invalid fields with a red border.
+       - Style #error-message so error messages are readable and centered.
+
+    2. JS Task:
+       - Handle form submission:
+         - Prevent the page from reloading.
+         - Clear previous errors before running checks.
+       - Validation checks:
+         1. Username cannot be empty. If empty, show: "Username is required."
+         2. Email must contain both "@" and ".". If invalid, show: "Please enter a valid email address."
+         3. Password must be at least 6 characters long. If shorter, show: "Password must be at least 6 characters."
+         4. Add the error styling class to whichever field fails validation.
+         5. If all checks pass, show "Registration Successful!" in green.
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f1f5f9;
+    }
+
+    .form-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      width: 320px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e293b;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    /* Write your CSS here */
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-card">
+    <h3>Sign Up</h3>
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="e.g. johndoe">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="e.g. john@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Min 6 characters">
+      </div>
+
+      <button type="submit" id="submit-btn">Register</button>
+      <div id="error-message"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

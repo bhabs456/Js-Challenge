@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 7: Live Item Filter</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you must implement a real-time list filter as the user types.
+
+    1. CSS Task:
+       - Style the focus state of #filter-input to have a distinct border color.
+       - Add a hover effect for list items (`li`) with a background color transition.
+
+    2. JS Task:
+       - As the user types in #filter-input:
+         - Compare the entered search term with each item in the list.
+         - Search matching must be case-insensitive.
+         - Display only items that match the search query.
+         - Hide items that do not match.
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #dfe6e9;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 330px;
+    }
+
+    h3 {
+      color: #2d3436;
+      margin-bottom: 15px;
+    }
+
+    #filter-input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid #b2bec3;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    /* Write your CSS here */
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f1f2f6;
+      font-size: 15px;
+      color: #2f3542;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>Filter Technologies</h3>
+    <input type="text" id="filter-input" placeholder="Type to filter...">
+
+    <ul id="skills-list">
+      <li class="item">JavaScript</li>
+      <li class="item">HTML5 & CSS3</li>
+      <li class="item">React JS</li>
+      <li class="item">Node JS</li>
+      <li class="item">Python</li>
+      <li class="item">SQL Database</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

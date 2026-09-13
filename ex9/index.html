@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 9: Temperature Converter</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you must convert temperature from Celsius to Fahrenheit.
+
+    1. CSS Task:
+       - Style the #result-box with a border, light background, padding, rounded
+         corners, and centered bold text.
+
+    2. JS Task:
+       - When #convert-btn is clicked:
+         - Validate the input: if empty or not a valid number, display
+           "Please enter a valid number!" in red color.
+         - Otherwise, calculate Fahrenheit from Celsius and display the output
+           formatted to 1 decimal place: "Result: X °C = Y °F".
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f1f5f9;
+    }
+
+    .converter-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      width: 330px;
+      text-align: center;
+    }
+
+    h3 {
+      color: #1e293b;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0ea5e9;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    button:hover {
+      background-color: #0284c7;
+    }
+
+    #result-box {
+      /* Write your CSS here */
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="converter-card">
+    <h3>Celsius to Fahrenheit</h3>
+    
+    <div class="input-group">
+      <input type="number" id="celsius-input" placeholder="Enter Celsius (°C)">
+    </div>
+
+    <button id="convert-btn">Convert</button>
+
+    <div id="result-box">Converted value will appear here</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

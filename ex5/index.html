@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5: Theme Switcher</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you implement a Dark / Light theme toggle.
+
+    1. CSS Task:
+       - Define the CSS rules for dark mode:
+         - When dark mode is active, the page background must become dark and text light.
+         - The card container and heading must also adapt with appropriate dark colors.
+
+    2. JS Task:
+       - When #theme-toggle-btn is clicked:
+         - Switch between dark mode and light mode.
+         - Update button text:
+           - If currently dark mode: "Switch to Light Mode"
+           - If currently light mode: "Switch to Dark Mode"
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f6fa;
+      color: #2f3640;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    button {
+      padding: 10px 18px;
+      background-color: #3742fa;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #2f35b8;
+    }
+
+    /* Write your dark mode CSS here */
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Theme Switcher</h2>
+    <p>Practice toggle switches commonly asked in Accenture web rounds!</p>
+    <button id="theme-toggle-btn">Switch to Dark Mode</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

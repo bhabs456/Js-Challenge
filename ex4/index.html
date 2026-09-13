@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4: Bill Calculator</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you calculate the total bill for headphones priced at $50 each.
+
+    1. CSS Task:
+       - Style the #bill-summary result box with a distinct background color,
+         border, padding, border-radius, and centered bold text.
+
+    2. JS Task:
+       - Read the entered quantity and promo code:
+         - If the quantity is not a valid number greater than 0:
+           Display "Please enter a valid quantity" in #bill-summary.
+         - Base calculation: subtotal = quantity * unit price ($50).
+         - If the promo code entered is "FLAT20", apply a 20% discount to the bill.
+         - Display the final bill formatted to 2 decimal places: "Final Total: $XX.XX".
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f1f2f6;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 340px;
+    }
+
+    h3 {
+      color: #2f3542;
+      margin-bottom: 5px;
+    }
+
+    .price-tag {
+      font-size: 14px;
+      color: #747d8c;
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ced6e0;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2ed573;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    button:hover {
+      background-color: #26af5f;
+    }
+
+    #bill-summary {
+      /* Write your CSS here */
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>Wireless Headphones</h3>
+    <div class="price-tag">Unit Price: $50</div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" placeholder="e.g. 2" value="1">
+    </div>
+
+    <div class="form-group">
+      <label for="promo">Promo Code (Try 'FLAT20'):</label>
+      <input type="text" id="promo" placeholder="Enter coupon">
+    </div>
+
+    <button id="calc-btn">Calculate Bill</button>
+
+    <div id="bill-summary">Final Total: $50.00</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

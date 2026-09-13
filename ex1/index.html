@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 1: Counter App</title>
+
+  <!-- =========================================================================
+    PROBLEM STATEMENT:
+    In this exercise, you have a counter application with +, -, and Reset buttons.
+
+    1. CSS Task:
+       - The buttons are currently misaligned. Make sure all three buttons are 
+         displayed in a single horizontal row, centered, with even spacing between them.
+
+    2. JS Task:
+       - Fix the counter logic in script.js:
+         - The count must not go below 0.
+         - The count must not exceed 10. When the user attempts to increase beyond 10,
+           trigger an alert saying "Max limit reached!".
+         - The reset button should reset the count back to 0.
+         - The displayed count on the screen must accurately reflect every change.
+  ========================================================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+    }
+
+    .card {
+      background: lightcoral;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 320px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #count-display {
+      font-size: 56px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 15px 0 25px;
+    }
+
+    .button-group {
+      /* Write your CSS here */
+      
+
+    }
+
+    button {
+      padding: 10px 18px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-decrease {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .btn-reset {
+      background-color: #7f8c8d;
+      color: white;
+    }
+
+    .btn-increase {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Counter App</h2>
+    <div id="count-display">0</div>
+
+    <div class="button-group">
+      <button class="btn-decrease" id="btn-dec">−</button>
+      <button class="btn-reset" id="btn-reset">Reset</button>
+      <button class="btn-increase" id="btn-inc">+</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
